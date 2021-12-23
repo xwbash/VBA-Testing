@@ -1,0 +1,13 @@
+Option Explicit
+Private Sub Worksheet_Change(ByVal Target As Range)
+    Dim GirilenDeger As String
+    Dim Deger As Integer
+    GirilenDeger = Target.Value
+    For Deger = 1 To Target.Row - 1
+        If GirilenDeger = Cells(Deger, 1).Value Then
+            MsgBox ("AynıDegerler girilemez")
+        Else
+            MsgBox ("Aynı degil")
+        End If
+    Next Deger
+End Sub
